@@ -27,7 +27,7 @@ s = out.split()
 
 for i in range(0, 6):
   print("Setting fan {} to {}".format(i, fan))
-  idx = 92 + 4 * i
+  idx = 86 + 4 * i //Changed from idx = 92 + 4 * i because FAN0 was not being addressed and controlled properly.
   s[idx+0] = "80"
   s[idx+1] = "00"
   s[idx+2] = "00"
