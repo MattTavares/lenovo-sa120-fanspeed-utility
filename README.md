@@ -28,16 +28,18 @@ You can use `sg_ses` to identify SES devices, e.g.:
     # sg_ses /dev/ses1
       LENOVO    ThinkServerSA120  1007
     …
+Alternatively, you can use 'lsscsi' and 'grep' to identify all SA120 enclosures with a single command, e.g.:
+    # lsscsi --generic | grep ThinkServerSA120
 
 Once you've found your SA120, use `fancontrol.py` to set the fan speed:
 
     # python fancontrol.py /dev/sg0 2
-    Fan 0 speed: 0
-    Fan 1 speed: 947
-    Fan 2 speed: 932
-    Fan 3 speed: 812
-    Fan 4 speed: 932
-    Fan 5 speed: 947
+    Fan 0 speed: 444
+    Fan 1 speed: 613
+    Fan 2 speed: 606
+    Fan 3 speed: 446
+    Fan 4 speed: 604
+    Fan 5 speed: 617
     Reading current configuration...
     Setting fan 0 to 2
     Setting fan 1 to 2
@@ -48,10 +50,9 @@ Once you've found your SA120, use `fancontrol.py` to set the fan speed:
       LENOVO    ThinkServerSA120  1007
     Sending Enclosure Control [0x2] page, with page length=296 bytes
 
-    Fan 0 speed: 0
+    Fan 0 speed: 820
     Fan 1 speed: 945
     Fan 2 speed: 932
     Fan 3 speed: 812
     Fan 4 speed: 926
     Fan 5 speed: 945
-
