@@ -22,10 +22,10 @@ Find the SCSI Enclosure Services device corresponding to your SA120. On Linux, t
 
 You can use `sg_ses` to identify SES devices, e.g.:
 
-    # sg_ses /dev/ses0
+    # sg_ses /dev/sg0
       LSI CORP  SAS2X28           0717
     …
-    # sg_ses /dev/ses1
+    # sg_ses /dev/sg1
       LENOVO    ThinkServerSA120  1007
     …
 
